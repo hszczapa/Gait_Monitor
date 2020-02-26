@@ -13,6 +13,7 @@ import Foundation
 // would need to come from the Arduino. Just an idea for now.
 struct DailyData: Identifiable, Codable {
     let id = UUID()
+    let date = Date()
     // Number of Steps in Each foot
     let totalStepsL: Int
     let totalStepsR: Int
@@ -49,8 +50,8 @@ struct DailyData: Identifiable, Codable {
         self.totalSteps = self.totalStepsL + self.totalStepsR
         
         // Calculate the percent of good steps
-        self.percentLeft = Double(goodStepsL) / Double(totalStepsL)
-        self.percentRight = Double(self.goodStepsR) / Double(self.totalStepsR)
+        self.percentLeft = (Double(goodStepsL) / Double(totalStepsL)) * 100
+        self.percentRight = (Double(self.goodStepsR) / Double(self.totalStepsR)) * 100
         // Calculate the Overall Percentage
         self.avgPercent = (self.percentLeft + self.percentRight) / 2.00
     }
@@ -78,3 +79,20 @@ class AllData: ObservableObject {
         dataArray = []
     }
 }
+
+extension Date {
+  func asString(style: DateFormatter.Style) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = style
+    return dateFormatter.string(from: self)
+  }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+

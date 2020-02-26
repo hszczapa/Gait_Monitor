@@ -10,31 +10,61 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var bluetooth = Bluetooth()
+    
     @ObservedObject var allData = AllData()
     
+    @State private var scan = false
     
-    let test = DailyData(80, 20, 90, 10)
+    var test = DailyData(80, 20, 90, 10)
     
     var body: some View {
         NavigationView {
             VStack {
-                Button("Connect") {
-                    // Call the CB Delegate
-                }
-                Spacer()
                 Text("Here is where the data from the current day will go")
-
-                Spacer()
-                Spacer()
-                Text("Add a list here with all the old data")
-                Spacer()
+                .padding(150)
+                
+                //Spacer()
+                //Spacer()
+              
+                VStack {
+                    Form {
+                        Section(header: Text("Daily Waking Data").bold()) {
+                            List {
+                                ForEach(allData.dataArray) { data in
+                                    
+                                    NavigationLink(destination: DataView(data: data)) {
+                                        HStack {
+                                            Text(data.date.asString(style: .full))
+                                            Spacer()
+                                            Text(String(format: "%.2f%%", data.avgPercent))
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                
             }
             .navigationBarTitle(Text("Gait Monitor"))
+        .listStyle(GroupedListStyle())
             .navigationBarItems(trailing: Button("Refresh") {
-                //Get the data from the shoe
+                self.allData.dataArray.append(self.test)
             })
             
         }
+        //        .sheet(isPresented: $scan) {
+        //            DataView(data: self.test)
+        //        }
+    }
+}
+
+struct DetailView: View {
+    var body: some View {
+        Text("Here is a new view!")
     }
 }
 

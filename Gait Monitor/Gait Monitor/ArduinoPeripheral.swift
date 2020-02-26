@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 
 class ArduinoPeripheral: NSObject {
-    public static let ArduinoServiceUUID = CBUUID(string: "E3541844-8E04-D71C-8B89-C414C73C32E3")
+    public static let ArduinoServiceUUID = CBUUID(string: "FFEO")
     public static let ArduinoCharUUID = CBUUID(string: "FFE0")
 }
 

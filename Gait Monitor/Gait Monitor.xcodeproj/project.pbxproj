@@ -13,9 +13,10 @@
 		2F1E5E2623EC859E00BA4681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E5E2523EC859E00BA4681 /* Assets.xcassets */; };
 		2F1E5E2923EC859E00BA4681 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E5E2823EC859E00BA4681 /* Preview Assets.xcassets */; };
 		2F1E5E2C23EC859E00BA4681 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E5E2A23EC859E00BA4681 /* LaunchScreen.storyboard */; };
-		2F1E5E5423EC867700BA4681 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E5E5323EC867700BA4681 /* BluetoothController.swift */; };
 		2F1E5E7623EC8A2400BA4681 /* ArduinoPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E5E7523EC8A2400BA4681 /* ArduinoPeripheral.swift */; };
+		2F6057372405E83A004ECF9E /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6057362405E83A004ECF9E /* DataView.swift */; };
 		2FBEB53523EDDA7B007B945B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEB53423EDDA7B007B945B /* Data.swift */; };
+		2FE2433123F9C21000A25FEE /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2433023F9C21000A25FEE /* BluetoothSerial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		2F1E5E2823EC859E00BA4681 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F1E5E2B23EC859E00BA4681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F1E5E2D23EC859E00BA4681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1E5E5323EC867700BA4681 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		2F1E5E7523EC8A2400BA4681 /* ArduinoPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoPeripheral.swift; sourceTree = "<group>"; };
+		2F6057362405E83A004ECF9E /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		2FBEB53423EDDA7B007B945B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2FE2433023F9C21000A25FEE /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +67,9 @@
 				2F1E5E1F23EC859A00BA4681 /* AppDelegate.swift */,
 				2F1E5E2123EC859A00BA4681 /* SceneDelegate.swift */,
 				2F1E5E2323EC859A00BA4681 /* ContentView.swift */,
+				2F6057362405E83A004ECF9E /* DataView.swift */,
 				2FBEB53423EDDA7B007B945B /* Data.swift */,
-				2F1E5E5323EC867700BA4681 /* BluetoothController.swift */,
+				2FE2433023F9C21000A25FEE /* BluetoothSerial.swift */,
 				2F1E5E7523EC8A2400BA4681 /* ArduinoPeripheral.swift */,
 				2F1E5E2523EC859E00BA4681 /* Assets.xcassets */,
 				2F1E5E2A23EC859E00BA4681 /* LaunchScreen.storyboard */,
@@ -158,8 +161,9 @@
 				2F1E5E2023EC859A00BA4681 /* AppDelegate.swift in Sources */,
 				2FBEB53523EDDA7B007B945B /* Data.swift in Sources */,
 				2F1E5E2223EC859A00BA4681 /* SceneDelegate.swift in Sources */,
+				2F6057372405E83A004ECF9E /* DataView.swift in Sources */,
 				2F1E5E7623EC8A2400BA4681 /* ArduinoPeripheral.swift in Sources */,
-				2F1E5E5423EC867700BA4681 /* BluetoothController.swift in Sources */,
+				2FE2433123F9C21000A25FEE /* BluetoothSerial.swift in Sources */,
 				2F1E5E2423EC859A00BA4681 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
